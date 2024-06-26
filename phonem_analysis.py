@@ -16,6 +16,21 @@ df = pd.read_csv('phonem_demo.csv')
 
 phonem_list = df.values.flatten()
 
+# Determine the maximum length of a phoneme
+max_length = max(len(phonem) for phonem in phonem_list)
+print(f"The highest number of letters in a phoneme is: {max_length}")
+
+# Create a dictionary to group phonemes by their length
+phoneme_groups = {i: [] for i in range(1, max_length + 1)}
+
+# Populate the dictionary with phonemes grouped by their length
+for phonem in phonem_list:
+    phoneme_groups[len(phonem)].append(phonem)
+
+# Print the groups
+for length, group in phoneme_groups.items():
+    print(f"Group {length} (phonemes with {length} letters): {group}")
+
 
 #DESCRIPTIVE STATISTICS AND VISUALIZATION
 print("\n########################### DESCRIPTIVE STATISTICS ###########################\n")
