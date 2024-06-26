@@ -1,0 +1,5 @@
+{
+    "existing_models": "https://sourceforge.net/projects/cmusphinx/files/Acoustic%20and%20Language%20Models/",
+    "lmtool": "http://www.speech.cs.cmu.edu/tools/lmtool-new.html"
+
+}
